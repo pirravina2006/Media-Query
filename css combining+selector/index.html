@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Combining CSS Selectors</title>
+  <link rel="stylesheet" href="./style.css">
+  <style>
+    h1,h2{
+      color:blueviolet;
+    }
+    div>p{
+      color:firebrick;
+    }
+    ul li{
+      color:blue;
+    }
+    li.done{
+      color:seagreen;
+    }
+    ul>p.done
+    {
+      font-size:1.5rem;
+      color:turquoise;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>To Do List</h1>
+  <h2>Monday</h2>
+  <div class="box">
+    <p class="done">Do these things today!</p>
+    <ul class="list">
+      <li>Wash Clothes</li>
+      <li class="done">Read</li>
+      <li class="done">Maths Questions</li>
+    </ul>
+  </div>
+  <ul class="items">
+    <p class="done">Other items</p>
+  </ul>
+  <p>The best preparation for tomorrow is doing your best today.</p>
+</body>
+
+</html>
+
+
+<!-- 
+ways of combining css selectors:
+---------------------------------- 
+1.grouping
+syntax:
+selector1,selector2,...{
+    property:value;
+}
+===========================
+2.Child selector
+syntax:
+selector1 > selector2{
+    property:value;
+}
+===========================
+3.Descendant selector
+syntax:
+selector1 selector2{      
+    property:value;
+}
+===========================
+4.Chaining
+syntax:
+selector1.selector2#selector3{
+    property:value;
+}
+===========================
+5.combining selectors 
+
+--> 
